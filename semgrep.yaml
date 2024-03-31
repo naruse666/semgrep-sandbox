@@ -1,0 +1,17 @@
+rules:
+  - id: fmt.print-to-logger
+    message: Use log.Print() instead of fmt.Print()
+    languages:
+      - go
+    paths:
+      include:
+      - app/
+    patterns:
+      - pattern-either:
+        - pattern: |
+            fmt.Print(...)
+        - pattern: |
+            fmt.Printf(...)
+        - pattern: |
+            fmt.Println(...)
+    severity: WARNING

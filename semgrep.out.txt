@@ -1,0 +1,16 @@
+                   
+                   
+┌─────────────────┐
+│ 3 Code Findings │
+└─────────────────┘
+                              
+  app/main.go
+    ❯❱ fmt.print-to-logger
+          Use log.Print() instead of fmt.Print()
+                                                
+           11┆ fmt.Print("Print.\n")
+            ⋮┆----------------------------------------
+           12┆ fmt.Printf("Printf.\n")
+            ⋮┆----------------------------------------
+           13┆ fmt.Println("Println.\n")
+
